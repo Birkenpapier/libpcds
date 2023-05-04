@@ -5,6 +5,7 @@ class RingBuffer
 {
 public:
     RingBuffer();
+
     void push(int val);
     int pop();
     int get(int offset);
@@ -14,6 +15,7 @@ public:
 
 private:
     const static int I_BUFFER_SIZE = 10;
+    
     int buffer[I_BUFFER_SIZE];
     int i_head = 0;
     int i_tail = 0;
