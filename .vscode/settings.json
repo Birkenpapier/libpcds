@@ -3,6 +3,17 @@
         "xstring": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "atomic": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "xmemory": "cpp",
+        "xutility": "cpp",
+        "system_error": "cpp",
+        "xlocnum": "cpp",
+        "xtr1common": "cpp"
     }
 }
