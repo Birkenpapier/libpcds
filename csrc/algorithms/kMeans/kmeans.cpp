@@ -1,3 +1,4 @@
+// build c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) pybind_kmeans.cpp -o kmeans_module$(python3-config --extension-suffix)
 #include <vector>
 #include <iostream>
 #include <cmath>
