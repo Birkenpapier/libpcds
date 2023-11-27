@@ -2,9 +2,6 @@
 
 libpcds (library For Python With Cool Data Structures And Algorithms) is a versatile C++ template library designed for fast and efficient implementation of various data structures and algorithms, readily usable in Python.
 
-## Warning
-> :warning: This software is currently under development and is not yet complete. Users should manage their expectations and use it for experimental or learning purposes only.
-
 > [!WARNING]
 > This software is unfinished. Keep your expectations low.
 
@@ -45,5 +42,3 @@ libpcds is a multipurpose library containing a diverse array of algorithms and d
 
 ## Contributions
 Contributions to libpcds are welcome! Whether it's adding new features, improving existing ones, or reporting bugs, your input is valuable. Please feel free to open issues or pull requests on the repository.
-
----
