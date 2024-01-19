@@ -1,5 +1,7 @@
 #include <unordered_map>
 #include <string>
+#include <iostream>
+#include <sstream>
 
 class TrieNode {
 public:
@@ -7,6 +9,16 @@ public:
     bool isEndOfWord;
 
     TrieNode() : isEndOfWord(false) {}
+
+    // recursive function to collect words in the trie
+    void toString(std::stringstream& out, const std::string& word) const {
+        if (isEndOfWord) {
+            out << word << std::endl;
+        }
+        for (const auto& child : children) {
+            child.second->toString(out, word + child.first);
+        }
+    }
 };
 
 class Trie {
@@ -16,6 +28,10 @@ private:
 public:
     Trie() {
         root = new TrieNode();
+    }
+
+    ~Trie() {
+        clear(root);
     }
 
     void insert(const std::string &word) {
@@ -40,5 +56,40 @@ public:
         return currentNode->isEndOfWord;
     }
 
-    // Additional methods like delete, startsWith, etc., can be implemented similarly.
+    std::string toString() const {
+        std::stringstream out;
+        root->toString(out, "");
+        return out.str();
+    }
+
+private:
+    void clear(TrieNode* node) {
+        for (auto& child : node->children) {
+            clear(child.second);
+        }
+        delete node;
+    }
 };
+
+int main() {
+    Trie trie;
+    trie.insert("hello");
+    trie.insert("world");
+    trie.insert("hi");
+    trie.insert("her");
+    trie.insert("he");
+    trie.insert("hero");
+
+    std::cout << "Trie contents: " << std::endl;
+    std::cout << trie.toString();
+
+    std::string searchWord = "hello";
+    std::cout << "Searching for \"" << searchWord << "\": "
+              << (trie.search(searchWord) ? "found" : "not found") << std::endl;
+
+    searchWord = "hell";
+    std::cout << "Searching for \"" << searchWord << "\": "
+              << (trie.search(searchWord) ? "found" : "not found") << std::endl;
+
+    return 0;
+}
