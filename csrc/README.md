@@ -1,1 +1,3 @@
-this folder contains the c/c++ source files which are implemented the different data structures
+# source
+
+this directory contains the source code of this beatiful library
