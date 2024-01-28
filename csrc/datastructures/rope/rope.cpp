@@ -15,7 +15,6 @@ class Rope {
 private:
     std::unique_ptr<RopeNode> root;
 
-    // Helper function for concatenation
     void concat(std::unique_ptr<RopeNode>& node, std::unique_ptr<RopeNode>& other) {
         if (!node) {
             node = std::move(other);
@@ -28,7 +27,6 @@ private:
         }
     }
 
-    // Helper function for insertion
     void insert(std::unique_ptr<RopeNode>& node, int pos, const std::string &s) {
         if (!node) {
             node = std::make_unique<RopeNode>(s);
@@ -40,7 +38,6 @@ private:
         node->weight = node->left->weight + (node->right ? node->right->weight : 0);
     }
 
-    // Const-correct print helper
     void print(const std::unique_ptr<RopeNode>& node) const {
         if (!node) return;
         print(node->left);
