@@ -42,3 +42,26 @@ libpcds is a multipurpose library containing a diverse array of algorithms and d
 
 ## Contributions
 Contributions to libpcds are welcome! Whether it's adding new features, improving existing ones, or reporting bugs, your input is valuable. Please feel free to open issues or pull requests on the repository.
+
+### upcomming algorithms and datastructures
+1. Breadth-First Search (BFS)
+2. Depth-First Search (DFS)
+3. Quick Sort
+4. Merge Sort
+5. Bellman-Ford Algorithm
+6. Permutations and Combinations
+7. Prim's Algorithm
+8. Kruskal's Algorithm
+9. Bucket Sort
+10. Radix Sort
+
+1. Linked List
+2. Doubly Linked List
+3. Circular Queue
+4. Priority Queue
+5. AVL Tree
+6. Red-Black Tree
+7. B-Tree
+8. B+ Tree
+9. Union-Find
+10. Trie (Prefix Tree)
